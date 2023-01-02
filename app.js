@@ -13,8 +13,10 @@ const project = require("./routes/project.js")
 //Setting up view engine PUG
 app.set('view engine','pug');
 
+//
+
 //Set static
-app.use(express.static('public'))
+app.use('/static',express.static('public'))
 
 
 /*
