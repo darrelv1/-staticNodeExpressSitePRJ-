@@ -7,7 +7,7 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link" : "",
       "github_link" :  "https://github.com/darrelv1/RandomQuoteMachine",
-      "images_urls" :  [],
+      "images_urls" :  []
     },
     {
       "id": 1,
@@ -16,7 +16,7 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/newrepo",
-      "images_urls" :  [],
+      "images_urls" :  []
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/interactiveForm",
-      "images_urls" :  [],
+      "images_urls" :  []
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/oppGame",
-      "images_urls" :  [],
+      "images_urls" :  []
     },
     {
       "id": 4,
@@ -43,7 +43,7 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS", "promise-based APIs", "modals"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/public_api_request",
-      "images_urls" :  [],
+      "images_urls" :  []
     }
   ]
 }

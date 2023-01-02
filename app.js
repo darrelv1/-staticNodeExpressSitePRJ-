@@ -21,6 +21,8 @@ app.use(express.static('public'))
 Routes
  */
 
+console.log("This aleast is owkring")
+
 //Render the home page
 app.use("/", index)
 
@@ -28,6 +30,8 @@ app.use("/", index)
 app.use("/about", about);
 
 //Renders Dynamic pages for projects
-app.use(`/project/${req.id}`, project)
+app.use(`/project/:id`, project)
+
+app.listen(3000 )
 
 
