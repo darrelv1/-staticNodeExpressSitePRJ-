@@ -18,12 +18,13 @@ app.set('view engine','pug');
 //Set static
 app.use('/static',express.static('public'))
 
-app.use((req,res, next)=>{
-    const err = new Error()
-    // err.status = "505"
-    // err.message = "505 Error"
-    next(err)
-})
+//testing 500
+// app.use((req,res, next)=>{
+//     const err = new Error()
+//     // err.status = "505"
+//     // err.message = "505 Error"
+//     next(err)
+// })
 /*
 Routes
  */
@@ -42,7 +43,7 @@ app.use(`/project`, project)
 //404 Error Handler
 app.use((req,res, next)=>{
     const err = new Error("404 Error")
-    err.status = "404"
+    err.status = 404
     err.message = "THIS IS 404 ERROR PAGE NOT FOUND!"
     next(err)
 })
@@ -52,15 +53,14 @@ app.use((err, req, res, next)=>{
 
     if(!err.message && !err.status){
      err.message = "Generic Error"
-     err.status = "505 Error by DarrelValdivieso"
+     err.status = 505
     }
-
-    console.log(err.status)
-    console.log(err.message)
+    console.log("Global Variable")
     console.dir(err.status)
     console.dir(err.message)
 
     res.send(`<h1>${err.message}</h1>`)
+    next()
 
 })
 

@@ -3,28 +3,25 @@ const router = express.Router();
 const data = require("../data.json")
 const projects = data.projects
 
-router.get("/:id",(req,res) => {
-    const id  = req.params.id
-    const query = req.query.age
-
-
-    const exactProject =  projects[id].project_name
-    const project = projects[id]
-    console.log(exactProject)
-    console.log('in the projects middleware')
-    console.log(id)
-    console.log(query)
-    res.render('project', {project} )
+router.get("/:id",(req,res,next) => {
+    if(data[req.params.id]) {
+        const id  = req.params.id
+        const exactProject = projects[id].project_name
+        const project = projects[id]
+        res.render('project', {project} )
+    } else{
+        err = new Error();
+        err.status = 404
+        err.message = "404 Page not found! This project does not exist"
+        next(err)
+    }
 });
 
-router.get("/",(req,res) => {
-    const id  = req.params.id
-
-
-    console.log('in PROJECTS')
-    console.log(id)
-
-    res.render('project')
-});
+// router.get("/",(req,res) => {
+//     const id  = req.params.id
+//
+//
+//
+// });
 
 module.exports = router
