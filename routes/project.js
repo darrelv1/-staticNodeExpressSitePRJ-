@@ -4,7 +4,7 @@ const data = require("../data.json")
 const projects = data.projects
 
 router.get("/:id",(req,res,next) => {
-    if(data[req.params.id]) {
+    if(projects[req.params.id]) {
         const id  = req.params.id
         const exactProject = projects[id].project_name
         const project = projects[id]
