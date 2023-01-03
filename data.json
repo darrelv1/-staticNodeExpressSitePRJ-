@@ -7,7 +7,7 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link" : "",
       "github_link" :  "https://github.com/darrelv1/RandomQuoteMachine",
-      "images_urls" :  [["/static/images/RandomQuoteMachine.jpeg"], "/static/images/550px.jpeg"]
+      "images_urls" :  [["/static/images/RandomQuoteMachine_1.jpg"], "/static/images/RandomQuoteMachine_mainpage.jpg"]
     },
     {
       "id": 1,
@@ -16,7 +16,11 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/newrepo",
-      "images_urls" :   [["/static/images/RandomQuoteMachine.jpeg"], "/static/images/RandomQuoteMachine.jpeg"]
+      "images_urls" :   [["/static/images/Pagination_1.jpg",
+                          "/static/images/Pagination_2.jpg",
+                          "/static/images/Pagination_3.jpg"
+                        ],
+                        "/static/images/Pagination_mainpage.jpg"]
     },
     {
       "id": 2,
@@ -25,7 +29,10 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/interactiveForm",
-      "images_urls" :   [["/static/images/RandomQuoteMachine.jpeg"], "/static/images/RandomQuoteMachine.jpeg"]
+      "images_urls" :   [["/static/images/InteractiveForm_1.jpg",
+                          "/static/images/InteractiveForm_2.jpg",
+                          "/static/images/InteractiveForm_4.jpg"
+                        ], "/static/images/InteractiveForm_mainpage.jpg"]
     },
     {
       "id": 3,
@@ -34,7 +41,10 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/oppGame",
-      "images_urls" :   [["/static/images/RandomQuoteMachine.jpeg"], "/static/images/RandomQuoteMachine.jpeg"]
+      "images_urls" :   [["/static/images/OOPGAME_1.jpg",
+                          "/static/images/OOPGAME_2.jpg",
+                          "/static/images/OOPGAME_3.jpg"],
+                          "/static/images/OOPGAME_mainpage.jpg"]
     },
     {
       "id": 4,
@@ -43,7 +53,11 @@
       "technologies":  ["JavaScript-Vanilla", "HTML", "CSS", "promise-based APIs", "modals"],
       "live_link":  "",
       "github_link" :"https://github.com/darrelv1/public_api_request",
-      "images_urls" :   [["/static/images/RandomQuoteMachine.jpeg"], "/static/images/RandomQuoteMachine.jpeg"]
+      "images_urls" :   [["/static/images/APIRequest_1.jpg",
+                          "/static/images/APIRequest_2.jpg",
+                          "/static/images/APIRequest_3.jpg",
+                          "/static/images/APIRequest_4.jpg"],
+                         "/static/images/APIRequest_2.jpg"]
     }
   ]
 }
