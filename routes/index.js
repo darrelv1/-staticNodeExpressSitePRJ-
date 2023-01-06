@@ -6,7 +6,9 @@ const data = require("../data.json")
 
 router.get("/",(req, res) =>{
  const projects = data.projects;
- res.render('index' , {projects})
+ const Personal = data.Personal;
+ console.log(Personal.Name)
+ res.render('index' , {projects, Personal})
 })
 
 

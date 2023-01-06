@@ -59,5 +59,30 @@
                           "/static/images/APIRequest_4.jpg"],
                          "/static/images/APIRequest_2.jpg"]
     }
-  ]
+  ],
+  "Personal": {
+    "Name" : "Darrel Valdiviezo",
+    "Number": "647-975-4069",
+    "Email" : "valdivieso4@hotmail.com",
+    "Title" :  "FullStack Developer",
+    "Github": "https://github.com/darrelv1",
+    "LinkedIn": "https://www.linkedin.com/in/darrel-valdiviezo-32889458/",
+    "Skills" : [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git and GitHub",
+      "VS Code",
+      "PyCharm",
+      "Node.js",
+      "Express",
+      "Pug",
+      "Python",
+      "Pandas",
+      "Django",
+      "Java",
+      "JavaFX"
+    ]
+  }
 }
+
