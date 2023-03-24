@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/teachers -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the CourseContainer.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Front End Course Directory</title>
+    <link href="./Front End Course Directory_files/icon" rel="stylesheet">
+  <script defer="" src="./Front End Course Directory_files/bundle.js"></script><style>@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);</style><style>/* ================================= 
+  WEB FONTS
+==================================== */
+
+/* ================================= 
+  ELEMENT STYLES
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #576366;
+  background: #5fcf80;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #404040;
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3b80d1;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* FORM & BUTTON STYLES -------- */
+
+.home a,
+input,
+button {
+  padding: .5em;
+  font-size: .9em;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  border: solid 1px #ccc;
+  outline: none;
+}
+
+button {
+  color: white;
+  background: #4188dc;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, .1);
+}
+
+/* ================================= 
+  LAYOUT & PAGE STYLES
+==================================== */
+
+.container {
+  width: 95%;
+  max-width: 780px;
+  padding-bottom: 2em;
+  margin: 0 auto 2em;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+}
+
+header {
+  background: #edeff0;
+  margin-bottom: 2em;
+}
+
+.main-content {
+  padding: 1em 2em;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.course {
+  margin-bottom: 1em;
+}
+
+/* IMAGES -------- */
+
+.course-img {
+  width: 70px;
+}
+
+.teacher-img {
+  width: 100%;
+  border-radius: .3em;
+}
+
+.not-found {
+  text-align: center;
+}
+
+/* MAIN NAV -------- */
+
+.main-nav a {
+  font-size: .95em;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 1em;
+  transition: .2s;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  color: #fff;
+  background: #3b80d1;
+}
+
+/* COURSE NAV -------- */
+
+.course-nav li {
+  display: inline-block;
+}
+
+.course-nav li+li {
+  margin-left: .6em;
+}
+
+.course-nav a {
+  font-size: .85em;
+  color: #7d7d7d;
+  padding: .2em .8em;
+  border-radius: .25em;
+  background: #eaebeb;
+  transition: .2s;
+}
+
+.course-nav a:hover,
+.course-nav a.active {
+  color: #fff;
+  background: #39add1;
+}
+
+/* ICONS -------- */
+
+.icn-logo {
+  background: #54606b;
+  color: #fff;
+}
+
+.icn-logo i {
+  font-size: 2.45em;
+  line-height: 0;
+  margin-top: 30px;
+}
+
+.icn-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
+}
+
+/* ================================= 
+  MEDIA QUERIES
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+  body {
+    padding-top: .8em;
+  }
+
+  .home a {
+    border-color: transparent;
+  }
+
+  .icn-logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 4px;
+  }
+
+  .main-nav a {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav a:hover {
+    border-color: rgba(0, 0, 0, .1);
+  }
+
+  .courses h2 {
+    margin-bottom: 0;
+  }
+
+  .course-nav {
+    display: block;
+    margin: 1.5em 0 3.2em;
+  }
+
+  .home a,
+  input,
+  button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-top: 3em;
+  }
+
+  .home a {
+    border-color: #3b80d1;
+  }
+
+  .media img,
+  .media>div,
+  .teacher {
+    float: left;
+  }
+
+  .media>div {
+    width: 85.1%;
+    margin-left: 1.5em;
+  }
+
+  .teacher {
+    width: 48.73%;
+    margin-bottom: 1.5em;
+  }
+
+  .teacher+.teacher {
+    margin-left: 2.54%;
+  }
+
+  .teacher:nth-child(2n+3) {
+    clear: left;
+    margin-left: 0;
+  }
+
+  /* MAIN NAV -------- */
+  .icn-logo {
+    margin-right: auto;
+    padding: 0 2em;
+  }
+
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    padding: 1.25em 1.5em;
+  }
+
+  .main-nav a:hover {
+    border-color: rgba(0, 0, 0, .1);
+  }
+
+  /* COURSE NAV -------- */
+  .course-nav {
+    float: right;
+  }
+
+  .courses h2 {
+    float: left;
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O3NDQUVzQzs7QUFJdEM7O3NDQUVzQzs7QUFFdEM7RUFDRSxzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsbUJBQW1CO0VBQ25CLFNBQVM7RUFDVCxpQ0FBaUM7QUFDbkM7O0FBRUE7OztFQUdFLFNBQVM7RUFDVCxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsU0FBUztFQUNULFNBQVM7RUFDVCxxQkFBcUI7RUFDckIsdUNBQXVDO0FBQ3pDOztBQUVBLGtDQUFrQzs7QUFFbEM7OztFQUdFLGFBQWE7RUFDYixlQUFlO0VBQ2Ysa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFlBQVk7RUFDWixtQkFBbUI7RUFDbkIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsK0JBQStCO0FBQ2pDOztBQUVBOztzQ0FFc0M7O0FBRXRDO0VBQ0UsVUFBVTtFQUNWLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsbUNBQW1DO0VBQ25DLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsY0FBYztFQUNkLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQSxvQkFBb0I7O0FBRXBCO0VBQ0UsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztFQUNYLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQSxzQkFBc0I7O0FBRXRCO0VBQ0UsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLGNBQWM7RUFDZCxZQUFZO0VBQ1osZUFBZTtBQUNqQjs7QUFFQTs7RUFFRSxXQUFXO0VBQ1gsbUJBQW1CO0FBQ3JCOztBQUVBLHdCQUF3Qjs7QUFFeEI7RUFDRSxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLGVBQWU7QUFDakI7O0FBRUE7O0VBRUUsV0FBVztFQUNYLG1CQUFtQjtBQUNyQjs7QUFFQSxtQkFBbUI7O0FBRW5CO0VBQ0UsbUJBQW1CO0VBQ25CLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixjQUFjO0VBQ2QsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLG9CQUFvQjtBQUN0Qjs7QUFFQTs7c0NBRXNDOztBQUV0QztFQUNFO0lBQ0UsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UsY0FBYztJQUNkLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsbUJBQW1CO0VBQ3JCOztFQUVBO0lBQ0UsaUNBQWlDO0lBQ2pDLG9DQUFvQztFQUN0Qzs7RUFFQTtJQUNFLCtCQUErQjtFQUNqQzs7RUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLGNBQWM7SUFDZCxxQkFBcUI7RUFDdkI7O0VBRUE7OztJQUdFLGNBQWM7SUFDZCxXQUFXO0lBQ1gsa0JBQWtCO0VBQ3BCO0FBQ0Y7O0FBRUE7RUFDRTtJQUNFLGdCQUFnQjtFQUNsQjs7RUFFQTtJQUNFLHFCQUFxQjtFQUN2Qjs7RUFFQTs7O0lBR0UsV0FBVztFQUNiOztFQUVBO0lBQ0UsWUFBWTtJQUNaLGtCQUFrQjtFQUNwQjs7RUFFQTtJQUNFLGFBQWE7SUFDYixvQkFBb0I7RUFDdEI7O0VBRUE7SUFDRSxrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsY0FBYztFQUNoQjs7RUFFQSxzQkFBc0I7RUFDdEI7SUFDRSxrQkFBa0I7SUFDbEIsY0FBYztFQUNoQjs7RUFFQTs7SUFFRSxhQUFhO0lBQ2IsZUFBZTtFQUNqQjs7RUFFQTtJQUNFLGtDQUFrQztJQUNsQyxtQ0FBbUM7SUFDbkMscUJBQXFCO0VBQ3ZCOztFQUVBO0lBQ0UsK0JBQStCO0VBQ2pDOztFQUVBLHdCQUF3QjtFQUN4QjtJQUNFLFlBQVk7RUFDZDs7RUFFQTtJQUNFLFdBQVc7RUFDYjtBQUNGIiwic291cmNlc0NvbnRlbnQiOlsiLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IFxuICBXRUIgRk9OVFNcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSAqL1xuXG5AaW1wb3J0IHVybChodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvOjQwMCw1MDAsNzAwKTtcblxuLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IFxuICBFTEVNRU5UIFNUWUxFU1xuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovXG5cbioge1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuXG5ib2R5IHtcbiAgY29sb3I6ICM1NzYzNjY7XG4gIGJhY2tncm91bmQ6ICM1ZmNmODA7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xufVxuXG5oMSxcbmgyLFxudWwge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG5cbmgyIHtcbiAgY29sb3I6ICM0MDQwNDA7XG4gIGZvbnQtc2l6ZTogMS42ZW07XG4gIG1hcmdpbi1ib3R0b206IDEuMjVlbTtcbn1cblxudWwge1xuICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG59XG5cbmEge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGNvbG9yOiAjM2I4MGQxO1xufVxuXG5ociB7XG4gIGJvcmRlcjogMDtcbiAgaGVpZ2h0OiAwO1xuICBtYXJnaW46IDIuM2VtIDAgMmVtIDA7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIC4xKTtcbn1cblxuLyogRk9STSAmIEJVVFRPTiBTVFlMRVMgLS0tLS0tLS0gKi9cblxuLmhvbWUgYSxcbmlucHV0LFxuYnV0dG9uIHtcbiAgcGFkZGluZzogLjVlbTtcbiAgZm9udC1zaXplOiAuOWVtO1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBib3JkZXI6IHNvbGlkIDFweCAjY2NjO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG5idXR0b24ge1xuICBjb2xvcjogd2hpdGU7XG4gIGJhY2tncm91bmQ6ICM0MTg4ZGM7XG4gIHBhZGRpbmctbGVmdDogMWVtO1xuICBwYWRkaW5nLXJpZ2h0OiAxZW07XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDAsIDAsIDAsIC4xKTtcbn1cblxuLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IFxuICBMQVlPVVQgJiBQQUdFIFNUWUxFU1xuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovXG5cbi5jb250YWluZXIge1xuICB3aWR0aDogOTUlO1xuICBtYXgtd2lkdGg6IDc4MHB4O1xuICBwYWRkaW5nLWJvdHRvbTogMmVtO1xuICBtYXJnaW46IDAgYXV0byAyZW07XG4gIGJhY2tncm91bmQ6ICNmZmY7XG4gIGJvcmRlci1yYWRpdXM6IC41ZW07XG4gIGJveC1zaGFkb3c6IDAgM3B4IHJnYmEoMCwgMCwgMCwgLjEpO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG5oZWFkZXIge1xuICBiYWNrZ3JvdW5kOiAjZWRlZmYwO1xuICBtYXJnaW4tYm90dG9tOiAyZW07XG59XG5cbi5tYWluLWNvbnRlbnQge1xuICBwYWRkaW5nOiAxZW0gMmVtO1xufVxuXG4uZ3JvdXA6YWZ0ZXIge1xuICBjb250ZW50OiBcIlwiO1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgY2xlYXI6IGJvdGg7XG59XG5cbi5jb3Vyc2Uge1xuICBtYXJnaW4tYm90dG9tOiAxZW07XG59XG5cbi8qIElNQUdFUyAtLS0tLS0tLSAqL1xuXG4uY291cnNlLWltZyB7XG4gIHdpZHRoOiA3MHB4O1xufVxuXG4udGVhY2hlci1pbWcge1xuICB3aWR0aDogMTAwJTtcbiAgYm9yZGVyLXJhZGl1czogLjNlbTtcbn1cblxuLm5vdC1mb3VuZCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLyogTUFJTiBOQVYgLS0tLS0tLS0gKi9cblxuLm1haW4tbmF2IGEge1xuICBmb250LXNpemU6IC45NWVtO1xuICBjb2xvcjogIzIyMjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBkaXNwbGF5OiBibG9jaztcbiAgcGFkZGluZzogMWVtO1xuICB0cmFuc2l0aW9uOiAuMnM7XG59XG5cbi5tYWluLW5hdiBhOmhvdmVyLFxuLm1haW4tbmF2IC5hY3RpdmUge1xuICBjb2xvcjogI2ZmZjtcbiAgYmFja2dyb3VuZDogIzNiODBkMTtcbn1cblxuLyogQ09VUlNFIE5BViAtLS0tLS0tLSAqL1xuXG4uY291cnNlLW5hdiBsaSB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cblxuLmNvdXJzZS1uYXYgbGkrbGkge1xuICBtYXJnaW4tbGVmdDogLjZlbTtcbn1cblxuLmNvdXJzZS1uYXYgYSB7XG4gIGZvbnQtc2l6ZTogLjg1ZW07XG4gIGNvbG9yOiAjN2Q3ZDdkO1xuICBwYWRkaW5nOiAuMmVtIC44ZW07XG4gIGJvcmRlci1yYWRpdXM6IC4yNWVtO1xuICBiYWNrZ3JvdW5kOiAjZWFlYmViO1xuICB0cmFuc2l0aW9uOiAuMnM7XG59XG5cbi5jb3Vyc2UtbmF2IGE6aG92ZXIsXG4uY291cnNlLW5hdiBhLmFjdGl2ZSB7XG4gIGNvbG9yOiAjZmZmO1xuICBiYWNrZ3JvdW5kOiAjMzlhZGQxO1xufVxuXG4vKiBJQ09OUyAtLS0tLS0tLSAqL1xuXG4uaWNuLWxvZ28ge1xuICBiYWNrZ3JvdW5kOiAjNTQ2MDZiO1xuICBjb2xvcjogI2ZmZjtcbn1cblxuLmljbi1sb2dvIGkge1xuICBmb250LXNpemU6IDIuNDVlbTtcbiAgbGluZS1oZWlnaHQ6IDA7XG4gIG1hcmdpbi10b3A6IDMwcHg7XG59XG5cbi5pY24tZXJyb3Ige1xuICBmb250LXNpemU6IDMuMmVtO1xuICBtYXJnaW4tYm90dG9tOiAuMjVlbTtcbn1cblxuLyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IFxuICBNRURJQSBRVUVSSUVTXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi9cblxuQG1lZGlhIChtaW4td2lkdGg6IDApIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICBib2R5IHtcbiAgICBwYWRkaW5nLXRvcDogLjhlbTtcbiAgfVxuXG4gIC5ob21lIGEge1xuICAgIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIH1cblxuICAuaWNuLWxvZ28ge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBwYWRkaW5nLWJvdHRvbTogNHB4O1xuICB9XG5cbiAgLm1haW4tbmF2IGEge1xuICAgIGJvcmRlci10b3A6IDJweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgICBib3JkZXItYm90dG9tOiAycHggc29saWQgdHJhbnNwYXJlbnQ7XG4gIH1cblxuICAubWFpbi1uYXYgYTpob3ZlciB7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2JhKDAsIDAsIDAsIC4xKTtcbiAgfVxuXG4gIC5jb3Vyc2VzIGgyIHtcbiAgICBtYXJnaW4tYm90dG9tOiAwO1xuICB9XG5cbiAgLmNvdXJzZS1uYXYge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIG1hcmdpbjogMS41ZW0gMCAzLjJlbTtcbiAgfVxuXG4gIC5ob21lIGEsXG4gIGlucHV0LFxuICBidXR0b24ge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgfVxufVxuXG5AbWVkaWEgKG1pbi13aWR0aDogNzY5cHgpIHtcbiAgYm9keSB7XG4gICAgcGFkZGluZy10b3A6IDNlbTtcbiAgfVxuXG4gIC5ob21lIGEge1xuICAgIGJvcmRlci1jb2xvcjogIzNiODBkMTtcbiAgfVxuXG4gIC5tZWRpYSBpbWcsXG4gIC5tZWRpYT5kaXYsXG4gIC50ZWFjaGVyIHtcbiAgICBmbG9hdDogbGVmdDtcbiAgfVxuXG4gIC5tZWRpYT5kaXYge1xuICAgIHdpZHRoOiA4NS4xJTtcbiAgICBtYXJnaW4tbGVmdDogMS41ZW07XG4gIH1cblxuICAudGVhY2hlciB7XG4gICAgd2lkdGg6IDQ4LjczJTtcbiAgICBtYXJnaW4tYm90dG9tOiAxLjVlbTtcbiAgfVxuXG4gIC50ZWFjaGVyKy50ZWFjaGVyIHtcbiAgICBtYXJnaW4tbGVmdDogMi41NCU7XG4gIH1cblxuICAudGVhY2hlcjpudGgtY2hpbGQoMm4rMykge1xuICAgIGNsZWFyOiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiAwO1xuICB9XG5cbiAgLyogTUFJTiBOQVYgLS0tLS0tLS0gKi9cbiAgLmljbi1sb2dvIHtcbiAgICBtYXJnaW4tcmlnaHQ6IGF1dG87XG4gICAgcGFkZGluZzogMCAyZW07XG4gIH1cblxuICBoZWFkZXIsXG4gIC5tYWluLW5hdiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG4gIH1cblxuICAubWFpbi1uYXYgYSB7XG4gICAgYm9yZGVyLWxlZnQ6IDNweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgICBib3JkZXItcmlnaHQ6IDNweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgICBwYWRkaW5nOiAxLjI1ZW0gMS41ZW07XG4gIH1cblxuICAubWFpbi1uYXYgYTpob3ZlciB7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2JhKDAsIDAsIDAsIC4xKTtcbiAgfVxuXG4gIC8qIENPVVJTRSBOQVYgLS0tLS0tLS0gKi9cbiAgLmNvdXJzZS1uYXYge1xuICAgIGZsb2F0OiByaWdodDtcbiAgfVxuXG4gIC5jb3Vyc2VzIGgyIHtcbiAgICBmbG9hdDogbGVmdDtcbiAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="container"><header><span class="icn-logo"><i class="material-icons">code</i></span><ul class="main-nav"><li><a class="" href="http://localhost:3000/">Home</a></li><li><a class="" href="http://localhost:3000/about">About</a></li><li><a aria-current="page" class="active" href="http://localhost:3000/teachers">Teachers</a></li><li><a class="" href="http://localhost:3000/courses">Courses</a></li></ul></header><div class="main-content"><h2>Teachers</h2><ul class="group"><li class="teacher"><img class="teacher-img" src="./Front End Course Directory_files/angie.png" alt="teacher"><h3>Angie McAngular</h3><p>Angie is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p></li><li class="teacher"><img class="teacher-img" src="./Front End Course Directory_files/nodestradamus.png" alt="teacher"><h3>NodeStradamus</h3><p>'NodeStra' is a software engineer and philosopher trying to leave the world better than he found it. He codes for non-profits, eCommerce, and large-scale web apps.</p></li><li class="teacher"><img class="teacher-img" src="./Front End Course Directory_files/geo.png" alt="teacher"><h3>Geo 'Lo' Cation</h3><p>Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support students in removing all barriers to learning code.</p></li><li class="teacher"><img class="teacher-img" src="./Front End Course Directory_files/ecma.png" alt="teacher"><h3>Ecma Scriptnstuff</h3><p>Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p></li><li class="teacher"><img class="teacher-img" src="./Front End Course Directory_files/jay.png" alt="teacher"><h3>Jay Query</h3><p>Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p></li><li class="teacher"><img class="teacher-img" src="./Front End Course Directory_files/json.png" alt="teacher"><h3>Json Babel</h3><p>All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p></li></ul></div></div></div>
+    <!--
+      This CourseContainer file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"></scribe-shadow></body></html>
