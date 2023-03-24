@@ -18,16 +18,7 @@ app.set('view engine','pug');
 //Set static
 app.use('/static',express.static('public'))
 
-//testing 500
-// app.use((req,res, next)=>{
-//     const err = new Error()
-//     // err.status = "505"
-//     // err.message = "505 Error"
-//     next(err)
-// })
-/*
-Routes
- */
+
 
 
 
@@ -46,8 +37,8 @@ app.use((req,res, next)=>{
     const err = new Error("404 Error")
     err.status = 404
     err.message = "THIS IS A 404 ERROR -  page/url not found!"
-    next(err)
 
+    next(err)
 })
 
 
@@ -58,6 +49,7 @@ app.use((err, req, res, next)=>{
      err.message = "Generic Error"
      err.status = 505
     }
+    console.dir("Activated the Global Error Handler")
     console.dir(err.status)
     console.dir(err.message)
 
