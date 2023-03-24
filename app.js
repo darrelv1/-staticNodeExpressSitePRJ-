@@ -40,13 +40,16 @@ app.use("/about", about);
 //Renders Dynamic pages for projects
 app.use(`/project`, project)
 
+
 //404 Error Handler
 app.use((req,res, next)=>{
     const err = new Error("404 Error")
     err.status = 404
-    err.message = "THIS IS 404 ERROR PAGE NOT FOUND!"
+    err.message = "THIS IS A 404 ERROR -  page/url not found!"
     next(err)
+
 })
+
 
 //Global Error Handler
 app.use((err, req, res, next)=>{
@@ -55,7 +58,6 @@ app.use((err, req, res, next)=>{
      err.message = "Generic Error"
      err.status = 505
     }
-    console.log("Global Variable")
     console.dir(err.status)
     console.dir(err.message)
 
