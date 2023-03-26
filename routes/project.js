@@ -7,6 +7,8 @@ router.get("/:id",(req,res,next) => {
     if(projects[req.params.id]) {
         const id  = req.params.id
         const project = projects[id]
+        console.log("ID "+id)
+        console.log("Project Keys :  "+Object.keys(project));
         res.render('project', {project} )
     } else{
 

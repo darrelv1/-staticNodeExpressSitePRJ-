@@ -31,8 +31,9 @@
       "github_link" :"https://github.com/darrelv1/interactiveForm",
       "images_urls" :   [["/static/images/InteractiveForm_1.jpg",
                           "/static/images/InteractiveForm_2.jpg",
-                          "/static/images/InteractiveForm_4.jpg"
-                        ], "/static/images/InteractiveForm_mainpage.jpg"]
+                          "/static/images/InteractiveForm_3.jpg"
+                        ],
+                        "/static/images/InteractiveForm_mainpage.jpg"]
     },
     {
       "id": 3,
